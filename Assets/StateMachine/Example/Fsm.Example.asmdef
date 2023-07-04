@@ -1,0 +1,16 @@
+{
+    "name": "YJL.Fsm.Example",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2f57f6e711252f54e9c4aabf2c11ae9f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
