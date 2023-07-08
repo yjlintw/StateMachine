@@ -39,14 +39,14 @@ namespace YJL.EditorHelper.Editor
             Rect propertyRect = new Rect(position);
             propertyRect.height = EditorGUIUtility.singleLineHeight;
             propertyRect.width = fullWidth - halfUWidth;
-            propertyRect.x = halfUWidth;
+            propertyRect.x = foldoutRect.x + foldoutRect.width;
             Rect popupField = new Rect(propertyRect);
             popupField.height = EditorGUIUtility.singleLineHeight;
             popupField.y += EditorGUIUtility.singleLineHeight;
-            popupField.width = propertyRect.width - oneUWidth - space;
+            popupField.width = propertyRect.width - oneUWidth * 2 - space;
             Rect refreshRect = new Rect(popupField);
             refreshRect.x = popupField.x + popupField.width + space;
-            refreshRect.width = oneUWidth;
+            refreshRect.width = oneUWidth * 2;
             Rect nameField = new Rect(propertyRect);
             nameField.width = halfWidth - space;
             nameField.height = EditorGUIUtility.singleLineHeight;
@@ -65,7 +65,7 @@ namespace YJL.EditorHelper.Editor
             if (showCreateField)
             {
 
-                if (GUI.Button(refreshRect, "⟲"))
+                if (GUI.Button(refreshRect, "Refresh"))
                 {
                     var fi = GetFieldInfo(property);
                     types = FindAllDerivedTypes(GetType(property));
