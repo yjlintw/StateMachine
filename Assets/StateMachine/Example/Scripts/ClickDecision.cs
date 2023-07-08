@@ -15,10 +15,18 @@ namespace YJL.Fsm.Example
         }
 
         public Chirality chirality = Chirality.Left;
+        public override void Enter(StateMachine stateMachine)
+        {
+        }
+
         public override bool Decide(StateMachine stateMachine)
         {
             ClickDetect detect = stateMachine.GetComponent<ClickDetect>();
             return chirality == Chirality.Left ? detect.IsLeftClick : detect.IsRightClick;
+        }
+
+        public override void Exit(StateMachine stateMachine)
+        {
         }
     }
 }

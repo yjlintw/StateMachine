@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4395049927313833611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b63e7525526384cbec5353f49447a8, type: 3}
+  m_Name: TimeDecision
+  m_EditorClassIdentifier: 
+  nameField: TimeDecision
+  duration: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24,18 +38,30 @@ MonoBehaviour:
   OnExit:
     m_PersistentCalls:
       m_Calls: []
-  Actions:
-  - {fileID: 11400000, guid: 28377b5521041474989ccee7f214291c, type: 2}
+  ActionTemplates:
+  - {fileID: 8724862461271707680}
   Transitions:
   - DecisionTemplate: {fileID: 11400000, guid: 19d45316b7094fa4fb4a627b56fe27a1, type: 2}
     TrueStateTemplate: {fileID: 11400000, guid: 7ed96750072193841908336aa553635e, type: 2}
     FalseStateTemplate: {fileID: 11400000, guid: 1ca1602f2f68d6b488569c90939aac7d, type: 2}
-    Decision: {fileID: 0}
-    TrueState: {fileID: 0}
-    FalseState: {fileID: 0}
   - DecisionTemplate: {fileID: 11400000, guid: b91d4349d62f73c49bff3fcef21049c4, type: 2}
-    TrueStateTemplate: {fileID: 11400000, guid: 7051f44a3fb58b44091dabc73a9e8bb6, type: 2}
+    TrueStateTemplate: {fileID: 11400000, guid: 0a3d41eeaa454474a9b546d24b90620b, type: 2}
     FalseStateTemplate: {fileID: 11400000, guid: 1ca1602f2f68d6b488569c90939aac7d, type: 2}
-    Decision: {fileID: 0}
-    TrueState: {fileID: 0}
-    FalseState: {fileID: 0}
+  - DecisionTemplate: {fileID: -4395049927313833611}
+    TrueStateTemplate: {fileID: 11400000, guid: 7ed96750072193841908336aa553635e, type: 2}
+    FalseStateTemplate: {fileID: 11400000, guid: 1ca1602f2f68d6b488569c90939aac7d, type: 2}
+--- !u!114 &8724862461271707680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964ac9f189cb85f4582267403bcc8f60, type: 3}
+  m_Name: ColorAction
+  m_EditorClassIdentifier: 
+  color: {r: 0.83586776, g: 1, b: 0, a: 1}
+  flash: 1
+  flashInterval: 0.2

@@ -9,7 +9,7 @@ namespace YJL.Fsm
     [Serializable]
     public sealed class Transition
     {
-        [Expand]
+        [Derived]
         public Decision DecisionTemplate;
         public BaseState TrueStateTemplate;
         public BaseState FalseStateTemplate;
@@ -23,6 +23,7 @@ namespace YJL.Fsm
             _decision = DecisionTemplate.Clone();
             _trueState = TrueStateTemplate.Clone();
             _falseState = FalseStateTemplate.Clone();
+            _decision.Enter(stateMachine);
         }
 
 
@@ -42,6 +43,7 @@ namespace YJL.Fsm
 
         public void Exit(StateMachine stateMachine)
         {
+            _decision.Exit(stateMachine);
             _decision = null;
             _trueState = null;
             _falseState = null;
