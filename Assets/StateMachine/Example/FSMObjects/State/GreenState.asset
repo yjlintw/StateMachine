@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ColorAction
   m_EditorClassIdentifier: 
   color: {r: 0, g: 1, b: 0, a: 1}
-  flash: 1
+  flash: 0
   flashInterval: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -78,4 +78,4 @@ MonoBehaviour:
   m_Name: TimeDecision
   m_EditorClassIdentifier: 
   nameField: TimeDecision
-  duration: 5
+  duration: 3

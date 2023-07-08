@@ -14,6 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameField: TimeDecision
   duration: 1
+--- !u!114 &-1204669492471891768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f22dbca04d1a94b9657015b8c74483, type: 3}
+  m_Name: Decision
+  m_EditorClassIdentifier: 
+  nameField: Decision
+  chirality: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,7 +55,7 @@ MonoBehaviour:
   ActionTemplates:
   - {fileID: 8724862461271707680}
   Transitions:
-  - DecisionTemplate: {fileID: 11400000, guid: 19d45316b7094fa4fb4a627b56fe27a1, type: 2}
+  - DecisionTemplate: {fileID: -1204669492471891768}
     TrueStateTemplate: {fileID: 11400000, guid: 7ed96750072193841908336aa553635e, type: 2}
     FalseStateTemplate: {fileID: 11400000, guid: 1ca1602f2f68d6b488569c90939aac7d, type: 2}
   - DecisionTemplate: {fileID: 11400000, guid: b91d4349d62f73c49bff3fcef21049c4, type: 2}
