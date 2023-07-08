@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f22dbca04d1a94b9657015b8c74483, type: 3}
   m_Name: NextClickDecision
   m_EditorClassIdentifier: 
-  keycode: 49
-  flag: 0
+  nameField: NextClickDecision
+  chirality: 0

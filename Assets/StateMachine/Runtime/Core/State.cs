@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using YJL.EditorHelper;
+using YJL.Fsm.Helper;
 
 namespace YJL.Fsm
 {
@@ -16,12 +17,20 @@ namespace YJL.Fsm
 
         public UnityEvent<StateMachine> OnExit;
 
-        [Expand]
-        public List<FSMAction> Actions = new List<FSMAction>();
+        [Derived]
+        public List<FSMAction> ActionTemplates = new List<FSMAction>();
         public List<Transition> Transitions = new List<Transition>();
+        private List<FSMAction> Actions = new List<FSMAction>();  
 
         public override void Enter(StateMachine stateMachine)
         {
+            Actions = new List<FSMAction>(ActionTemplates.Count);
+            foreach (FSMAction actionItem in ActionTemplates)
+            {
+                FSMAction newAction = actionItem.Clone();
+                Actions.Add(newAction);
+            }
+            
             foreach (FSMAction action in Actions)
             {
                 action.Enter(stateMachine);
@@ -70,6 +79,8 @@ namespace YJL.Fsm
             {
                 transition.Exit(stateMachine);
             }
+            
+            Actions.Clear();
         }
     }
 }
